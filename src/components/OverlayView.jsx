@@ -129,7 +129,11 @@ export class OverlayView extends React.PureComponent {
       offset,
       this.props
     )
-    _.assign(this.containerElement.style, layoutStyles)
+    _.assign(
+      this.containerElement.style,
+      layoutStyles,
+      this.props.containerStyle
+    )
   }
 
   onRemove() {
