@@ -433,6 +433,7 @@ declare module 'react-google-maps/lib/components/OverlayView' {
         getPixelPositionOffset?: (width: number, height: number) => { x?: number, y?: number }
         mapPaneName?: string
         position?: google.maps.LatLng | google.maps.LatLngLiteral
+        containerStyle?: CSSStyleDeclaration
     }
 
     export default class OverlayView extends Component<OverlayViewProps> {

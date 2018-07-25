@@ -58,6 +58,8 @@ export class OverlayView extends React.PureComponent {
      * @see https://developers.google.com/maps/documentation/javascript/3.exp/reference#OverlayView
      */
     getPixelPositionOffset: PropTypes.func,
+
+    containerStyle: PropTypes.object,
   }
 
   static contextTypes = {
@@ -87,6 +89,11 @@ export class OverlayView extends React.PureComponent {
   onAdd() {
     this.containerElement = document.createElement(`div`)
     this.containerElement.style.position = `absolute`
+    _.assign(
+      this.containerElement.style,
+      { position: "absolute" },
+      this.props.containerStyle
+    )
   }
 
   draw() {
