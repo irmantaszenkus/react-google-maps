@@ -115,6 +115,73 @@ declare module 'react-google-maps/lib/components/addons/MarkerClusterer' {
     }
 }
 
+declare module 'react-google-maps/lib/components/addons/MarkerWithLabel' {
+    import { Component, ReactElement } from 'react';
+
+    export interface MarkerWithLabelProps {
+        children: ReactElement<any>
+        labelAnchor: object
+        labelClass: string
+        labelStyle: object
+        labelVisible: boolean
+        noRedraw: boolean
+        defaultAnimation: any
+        defaultClickable:boolean
+        defaultCursor:string
+        defaultDraggable:boolean
+        defaultIcon: any
+        defaultLabel: any
+        defaultOpacity: number
+        defaultOptions: any
+        defaultPlace: any
+        defaultPosition: any
+        defaultShape: any
+        defaultTitle: string
+        defaultVisible: boolean
+        defaultZIndex: number
+        animation: any
+        clickable: boolean
+        cursor:	string
+        draggable: boolean
+        icon: any
+        label: any
+        opacity: number
+        options: any
+        place: any
+        position: any
+        shape: any
+        title: string
+        visible: boolean
+        zIndex: number
+
+        onDblClick?(e: google.maps.MouseEvent): void
+        onDragEnd?(e: google.maps.MouseEvent): void
+        onDragStart?(e: google.maps.MouseEvent): void
+        onMouseDown?(e: google.maps.MouseEvent): void
+        onMouseOut?(e: google.maps.MouseEvent): void
+        onMouseOver?(e: google.maps.MouseEvent): void
+        onMouseUp?(e: google.maps.MouseEvent): void
+        onRightClick?(e: google.maps.MouseEvent): void
+        onAnimationChange?(): void
+        onClick?(e: google.maps.MouseEvent): void
+        onClickableChanged?(): void
+        onCursorChanged?(): void
+        onDrag?(e: google.maps.MouseEvent): void
+        onDraggableChanged?(): void
+        onFlatChanged?(): void
+        onIconChanged?(): void
+        onPositionChanged?(): void
+        onShapeChanged?(): void
+        onTitleChanged?(): void
+        onVisibleChanged?(): void
+        onZindexChanged?(): void
+    }
+
+    export default class MarkerWithLabel extends Component<MarkerWithLabelProps> {
+    }
+}
+
+
 declare module 'react-google-maps/lib/components/Circle' {
     import { Component } from 'react'
 
@@ -258,7 +325,7 @@ declare module 'react-google-maps/lib/components/GoogleMap' {
     }
 
     export default class GoogleMap extends Component<GoogleMapProps> {
-        fitBounds(bounds: google.maps.LatLngBounds | google.maps.LatLngBoundsLiteral): void
+        fitBounds(bounds: google.maps.LatLngBounds | google.maps.LatLngBoundsLiteral, padding?: number): void
         panBy(x: number, y: number): void
         panTo(latLng: google.maps.LatLng | google.maps.LatLngLiteral): void
         panToBounds(latLngBounds: google.maps.LatLngBounds | google.maps.LatLngBoundsLiteral): void
