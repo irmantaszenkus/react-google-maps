@@ -116,43 +116,43 @@ declare module 'react-google-maps/lib/components/addons/MarkerClusterer' {
 }
 
 declare module 'react-google-maps/lib/components/addons/MarkerWithLabel' {
-    import { Component, ReactElement } from 'react';
+    import { Component, ReactNode } from 'react';
 
     export interface MarkerWithLabelProps {
-        children: ReactElement<any>
-        labelAnchor: object
-        labelClass: string
-        labelStyle: object
-        labelVisible: boolean
-        noRedraw: boolean
-        defaultAnimation: any
-        defaultClickable:boolean
-        defaultCursor:string
-        defaultDraggable:boolean
-        defaultIcon: any
-        defaultLabel: any
-        defaultOpacity: number
-        defaultOptions: any
-        defaultPlace: any
-        defaultPosition: any
-        defaultShape: any
-        defaultTitle: string
-        defaultVisible: boolean
-        defaultZIndex: number
-        animation: any
-        clickable: boolean
-        cursor:	string
-        draggable: boolean
-        icon: any
-        label: any
-        opacity: number
-        options: any
-        place: any
-        position: any
-        shape: any
-        title: string
-        visible: boolean
-        zIndex: number
+        children?: ReactNode
+        labelAnchor?: object
+        labelClass?: string
+        labelStyle?: CSSStyleDeclaration
+        labelVisible?: boolean
+        noRedraw?: boolean
+        defaultAnimation?: google.maps.Animation
+        defaultClickable?:boolean
+        defaultCursor?:string
+        defaultDraggable?:boolean
+        defaultIcon?: string | google.maps.Icon | google.maps.Symbol
+        defaultLabel?: google.maps.MarkerLabel
+        defaultOpacity?: number
+        defaultOptions?: google.maps.MarkerOptions
+        defaultPlace?: google.maps.Place
+        defaultPosition?: google.maps.LatLng | google.maps.LatLngLiteral
+        defaultShape?: google.maps.MarkerShape
+        defaultTitle?: string
+        defaultVisible?: boolean
+        defaultZIndex?: number
+        animation?: google.maps.Animation
+        clickable?: boolean
+        cursor?: string
+        draggable?: boolean
+        icon?: string | google.maps.Icon | google.maps.Symbol
+        label?: google.maps.MarkerLabel
+        opacity?: number
+        options?: google.maps.MarkerOptions
+        place?: google.maps.Place
+        position?: google.maps.LatLng | google.maps.LatLngLiteral
+        shape?: google.maps.MarkerShape
+        title?: string
+        visible?: boolean
+        zIndex?: number
 
         onDblClick?(e: google.maps.MouseEvent): void
         onDragEnd?(e: google.maps.MouseEvent): void
